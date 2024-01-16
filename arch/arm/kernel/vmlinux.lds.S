@@ -169,8 +169,8 @@ __start_rodata_section_aligned = ALIGN(__start_rodata, 1 << SECTION_SHIFT);
  * If you have to comment these two assert statements out, your
  * binutils is too old (for other reasons as well)
  */
-#ASSERT((__proc_info_end - __proc_info_begin), "missing CPU support")
-#ASSERT((__arch_info_end - __arch_info_begin), "no machine record defined")
+ASSERT((__proc_info_end - __proc_info_begin), "missing CPU support")
+ASSERT((__arch_info_end - __arch_info_begin), "no machine record defined")
 
 /*
  * The HYP init code can't be more than a page long,
